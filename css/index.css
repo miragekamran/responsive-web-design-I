@@ -71,21 +71,44 @@ h1, h2, h3, h4, h5 {
 } 
 
 
-nav {
+
+.nav {
 	display: flex;
-	justify-content: space-around;
-	flex-wrap: wrap-reverse;
+	
+	width: 100%;
+	justify-content: flex-start;
+	align-items: center;
 	
 }
 
-nav a {
+.nav div {
 	display: flex;
-	align-items: center;
-	align-content: space-between;
-	color: gray;
-	padding: 10px;
-	width: 14%;
+	
+	width: 70%;
+	justify-content: space-between;
 }
+
+.nav .img {
+	display: flex;
+	justify-content: flex-end;
+	width: 40%;
+}
+.nav .logo {
+	display: flex;
+	
+	
+	justify-content: flex-start;
+}
+.nav div a {
+	display: flex;
+	/* border: 1px solid lightblue; */
+	padding: 10px;
+	text-decoration: none;
+	color: gray;
+	
+}
+
+
 
 
 .top-middle {
@@ -164,19 +187,22 @@ footer {
 
 @media (max-width: 1024px) {
 	
-	.navi nav img {
-		flex-direction: column;
-		align-items: center;
-	}
-	.logo {
-		margin-bottom: 40px;
-	}
-	
-	nav a {
+	.nav {
 		display: flex;
-		align-content: center;
+		flex-direction: column-reverse;
 	}
 
+	.nav div {
+		display: flex;
+		width: 100%;
+		justify-content: space-around;
+		margin: 40px;
+	}
+	.nav .img {
+		display: flex;
+		margin: 5px;
+		justify-content: center;
+	}
 	.top-middle div {
 		justify-items: center;
 		margin: 50px;
@@ -189,30 +215,47 @@ footer {
 
 @media (max-width: 500px) {
 
-	.logo {
-		margin-bottom: 40px;
+	body {
+		margin: 0 auto;
+	}
+	.nav div {
+		display: flex;
+		margin: 0 auto;
+		flex-direction: column;
 	}
 
-	nav {
-		flex-direction: column-reverse;
-		align-items: center;
-		align-content: center;
-	}
-
-	nav a {
-		border-top: 1px solid gray;
-		width: 100%;
+	.nav div a {
+		display: flex;
+		border-top: 1px solid;
+		border-bottom: 1px solid;
+		justify-content: center;
 		
 	}
 
+	body .top-paragraph {
+		margin: 30px;
+	}
 	.top-paragraph {
 		flex-direction: column;
 		align-items: center;
 	}
+	body .middle-img {
+		margin: 30px;
+	}
 
+	.middle-img {
+		width: 87%;
+	}
+	body .bottom-paragraph {
+		margin: 30px;
+	}
 	.bottom-paragraph {
 		flex-direction: column;
 		align-items: center;
+	}
+
+	body .contact {
+		margin: 30px;
 	}
 }
 /* service.html starts here */
